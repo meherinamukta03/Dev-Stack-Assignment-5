@@ -135,16 +135,13 @@ Otherwise, it shows the selected technologies.
 A parent component can send data to a child component using <strong>props</strong>.
 </p>
 
-<pre>
-  <code>
-<Card
+<pre><code>
+&lt;Card
   CardInfo={CardInfo}
   selectedStack={selectedStack}
   addToStack={addToStack}
-/>
-</Card>
-  </code>
-</pre>
+/&gt;
+</code></pre>
 
 <p>
 Here, <strong>Technology</strong> is the parent component and
@@ -156,15 +153,14 @@ The parent can also send a function to the child.
 The child can call that function when needed.
 </p>
 
-<pre>
-onClick={() => addToStack(technology)}
-</pre>
+<pre><code>
+onClick={() =>addToStack(technology)}
+</code></pre>
 
 <p>
-Here, the <strong>Card</strong> component calls the
-<strong>addToStack</strong> function from the parent.
+Here, Cars <strong>Card</strong> component calls the
+<strong>addToStack</strong> function from the parent(Technology).
 </p>
-
 <hr>
 
 <div align="center">
