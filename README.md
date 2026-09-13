@@ -93,13 +93,13 @@ React needs a unique <code>key</code> to identify each item in a list.
 It helps React update the list correctly.
 </p>
 
-<pre>
+<pre><code>
 {selectedStack.map((technology) => (
-  <div key={technology.id}>
+  &lt;div key={technology.id}&gt;
     {technology.name}
-  </div>
+  &lt;/div&gt;
 ))}
-</pre>
+</code></pre>
 
 <p>
 Here from my YourStack component <code>technology.id</code> is the unique key.
