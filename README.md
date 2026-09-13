@@ -102,14 +102,14 @@ It helps React update the list correctly.
 </pre>
 
 <p>
-Here, <code>technology.id</code> is the unique key.
+Here from my YourStack component <code>technology.id</code> is the unique key.
 </p>
 
 <h3>6. What is conditional rendering? Show one place you used it.</h3>
 
 <p>
 Conditional rendering means showing different content based on a condition.
-I used it in the <strong>Your Stack</strong> section.
+I used it in the <strong>YourStack</strong> section.
 </p>
 
 <pre>
