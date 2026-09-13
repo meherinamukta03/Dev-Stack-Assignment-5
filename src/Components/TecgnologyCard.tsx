@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type IdataType from "../Types/dataType";
 import toast, { Toaster } from "react-hot-toast";
 import Card from "./Card";
+import YourStack from "./YourStack";
 
 
 
@@ -28,6 +29,26 @@ const Technology=({ DataPromise }:TechnologyProps)=>{
     setSelectedStack([...selectedStack,technology]);
     toast.success(`${technology.name} added to your stack!`);
   };
+  // Remove one technology
+  const removeFromStack = (id: string) => {
+    const technology = selectedStack.find(
+      (item) => item.id === id);
+
+    const newStack = selectedStack.filter(
+      (item) => item.id !== id);
+    setSelectedStack(newStack);
+    if (technology) {
+      toast.error(`${technology.name} removed from your stack!`);
+    }
+  };
+
+
+  // Remove all
+  const removeAll = () => {
+    setSelectedStack([]);
+    toast.error("All technologies removed!");
+  };
+
    return (
     <>
       <Toaster />
@@ -57,6 +78,15 @@ const Technology=({ DataPromise }:TechnologyProps)=>{
               CardInfo={CardInfo}
               selectedStack={selectedStack}
               addToStack={addToStack}
+            />
+
+          </div>
+           {/* Your Stack */}
+          <div className="md:col-span-2 lg:col-span-1">
+
+            <YourStack selectedStack={selectedStack}
+              removeFromStack={removeFromStack}
+              removeAll={removeAll}
             />
 
           </div>

@@ -72,23 +72,20 @@ const YourStack = ({selectedStack,removeFromStack,removeAll,}: YourStackProps) =
 
               </div>
 
+
             ))}
 
           </div>
-
+         
 
 
       
-
-
-
-
-
-
-
-
-
-
+        <button
+            onClick={removeAll}
+            className="w-full mt-5 border border-red-400 text-red-500 py-2 rounded-lg hover:bg-red-50"
+          >
+            Remove All
+          </button>
  </div>
 
       )}
