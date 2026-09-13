@@ -113,6 +113,7 @@ I used it in the <strong>YourStack</strong> section.
 </p>
 
 <pre>
+  <code>
 {selectedStack.length === 0 ? (
   <p>Your Stack is empty</p>
 ) : (
@@ -120,6 +121,7 @@ I used it in the <strong>YourStack</strong> section.
     Selected technologies
   </div>
 )}
+  </code>
 </pre>
 
 <p>
@@ -134,11 +136,14 @@ A parent component can send data to a child component using <strong>props</stron
 </p>
 
 <pre>
+  <code>
 <Card
   CardInfo={CardInfo}
   selectedStack={selectedStack}
   addToStack={addToStack}
 />
+</Card>
+  </code>
 </pre>
 
 <p>
